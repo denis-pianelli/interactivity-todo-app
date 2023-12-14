@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link rel="stylesheet" href="./css/fonts.css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Todo app</title>
+  </head>
+  <body>
+    <main class="main">
+      <section class="todo">
+        <div class="todo__header">
+          <h1 class="todo__header__title">Todo</h1>
+          <button class="todo__header__button"><i class="icon-sun"></i></button>
+        </div>
+        <form action="#" class="todo__form">
+          <div class="todo__input-container">
+            <input type="checkbox" name="todo" id="newTodo" disabled />
+            <input
+              type="text"
+              name="todo"
+              id="newTodoItem"
+              placeholder="Create a new todo..."
+            />
+          </div>
+
+          <div class="todo__list-item-container">
+            <div class="todo__list-input-container">
+              <input
+                class="todo__list__item-checkbox"
+                type="checkbox"
+                name="todo"
+                id="todo1"
+              />
+              <label for="todo1">Complete online JavaScript course</label>
+            </div>
+            <div class="todo__item-delete"><i class="icon-close"></i></div>
+          </div>
+          <div class="todo__list-item-container">
+            <div class="todo__list-input-container">
+              <input
+                class="todo__list__item-checkbox"
+                type="checkbox"
+                name="todo"
+                id="todo2"
+              />
+              <label for="todo2">Jog around the park 3x</label>
+            </div>
+            <div class="todo__item-delete"><i class="icon-close"></i></div>
+          </div>
+          <div class="todo__list-item-container">
+            <div class="todo__list-input-container">
+              <input
+                class="todo__list__item-checkbox"
+                type="checkbox"
+                name="todo"
+                id="todo3"
+              />
+              <label for="todo3">10 minutes meditation</label>
+            </div>
+            <div class="todo__item-delete"><i class="icon-close"></i></div>
+          </div>
+          <div class="todo__list-item-container">
+            <div class="todo__list-input-container">
+              <input
+                class="todo__list__item-checkbox"
+                type="checkbox"
+                name="todo"
+                id="todo4"
+              />
+              <label for="todo4">Read for 1 hour</label>
+            </div>
+            <div class="todo__item-delete"><i class="icon-close"></i></div>
+          </div>
+          <div class="todo__list-item-container">
+            <div class="todo__list-input-container">
+              <input
+                class="todo__list__item-checkbox"
+                type="checkbox"
+                name="todo"
+                id="todo5"
+              />
+              <label for="todo5">Pick up groceries</label>
+            </div>
+            <div class="todo__item-delete"><i class="icon-close"></i></div>
+          </div>
+          <div class="todo__list-item-container">
+            <div class="todo__list-input-container">
+              <input
+                class="todo__list__item-checkbox"
+                type="checkbox"
+                name="todo"
+                id="todo6"
+              />
+              <label for="todo6"> Complete Todo App on Frontend Mentor </label>
+            </div>
+            <div class="todo__item-delete"><i class="icon-close"></i></div>
+          </div>
+        </form>
+        <!-- Add dynamic number -->
+        <div class="todo__footer">
+          <p class="todo__footer__items-left"><span></span>items left</p>
+          <p class="todo__footer__items-filter">
+            <input type="radio" name="filter" id="all" checked /><label for="all"
+              >All</label
+            >
+            <input type="radio" name="filter" id="active" /><label for="active"
+              >Active</label
+            >
+            <input type="radio" name="filter" id="completed" /><label
+              for="completed"
+              >Completed</label
+            >
+          </p>
+          <p class="todo__footer__clear-items">
+            <a class="todo__footer__clear-btn" href="">Clear Completed</a>
+          </p>
+          <!-- Drag and drop to reorder -->
+        </div>
+      </section>
+    </main>
+
+    <script src="./js/todo.js"></script>
+    <script src="./js/theme.js"></script>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
