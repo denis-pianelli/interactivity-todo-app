@@ -78,7 +78,6 @@ const todos = {
 
     listeItems.forEach(function (item) {
       let isChecked = item.checked;
-			console.log(item);
 
       if (isChecked) {
         const textItem = item.nextElementSibling.textContent;
@@ -156,7 +155,6 @@ const todos = {
     const todoContainer = document.querySelector('.todo__form');
 
     const item = event.target.closest('.todo__list-item-container');
-    console.log('item:', item);
 
     const textItem = item.querySelector('label').textContent;
 
@@ -190,7 +188,6 @@ const todos = {
     );
 
     const itemState = todos.todoList[indexItemToUpdate].state;
-    console.log('itemState:', itemState);
 
     if (itemState === 'unchecked') {
       todos.todoList[indexItemToUpdate].state = 'checked';
@@ -198,8 +195,6 @@ const todos = {
       todos.todoList[indexItemToUpdate].state = 'unchecked';
     }
 
-    console.log(todos.todoList[indexItemToUpdate].state);
     localStorage.setItem('todoList', JSON.stringify(todos.todoList));
-    console.log(localStorage);
   },
 };
