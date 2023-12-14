@@ -28,6 +28,7 @@ Users should be able to:
 - Filter by all/active/complete todos
 - Clear all completed todos
 - Toggle light and dark mode
+- **Bonus**: - Persist data using local storage
 - **Bonus**: Drag and drop to reorder items on the list
 
 ### Screenshot
