@@ -1,7 +1,7 @@
 const app = {
 	init: function() {
 		theme.init();
-		todo.init();
+		todos.init();
 	}
 }
 
