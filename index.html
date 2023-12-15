@@ -35,10 +35,11 @@
             />
           </div>
 
+					<div id="todoListContainer"></div>
         </form>
 
-				<!-- template - todo item -->
-				<template id="template-todo">
+        <!-- template - todo item -->
+        <template id="template-todo">
           <div class="todo__list-item-container">
             <div class="todo__list-input-container">
               <input
@@ -50,14 +51,15 @@
             </div>
             <div class="todo__item-delete"><i class="icon-close"></i></div>
           </div>
-				</template>
-				<!-- /template - todo item -->
+        </template>
+        <!-- /template - todo item -->
 
         <!-- Add dynamic number -->
         <div class="todo__footer">
           <p class="todo__footer__items-left"><span></span>items left</p>
           <p class="todo__footer__items-filter">
-            <input type="radio" name="filter" id="all" checked /><label for="all"
+            <input type="radio" name="filter" id="all" checked /><label
+              for="all"
               >All</label
             >
             <input type="radio" name="filter" id="active" /><label for="active"
@@ -75,9 +77,12 @@
         </div>
       </section>
     </main>
+    <!-- jsDelivr :: Sortable :: Latest (https://www.jsdelivr.com/package/npm/sortablejs) -->
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 
     <script src="./js/todo.js"></script>
     <script src="./js/theme.js"></script>
     <script src="./js/index.js"></script>
+
   </body>
 </html>

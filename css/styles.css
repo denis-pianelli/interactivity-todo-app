@@ -85,7 +85,7 @@ a {
   padding: 1rem;
   background-color: var(--color-todo-bg);
 }
-.todo__list-item-container:nth-child(2) {
+.todo__list-item-container:nth-child(1) {
   border-radius: 10px 10px 0 0;
 }
 .todo__list-item-container {

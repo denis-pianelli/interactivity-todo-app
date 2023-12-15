@@ -4,6 +4,7 @@ const todos = {
   init: function () {
     todos.getAllTodo();
     todos.updateNbOfItemLeft();
+    todos.sortable(document.getElementById('todoListContainer'));
 
     const todoForm = document.querySelector('.todo__form');
 
@@ -71,7 +72,7 @@ const todos = {
     });
   },
   clearCompleted: function (event) {
-    const container = document.querySelector('.todo__form');
+    const todoContainer = document.getElementById('todoListContainer');
     const listeItems = document.querySelectorAll('.todo__list__item-checkbox');
 
     event.preventDefault();
@@ -90,7 +91,7 @@ const todos = {
 
         localStorage.setItem('todoList', JSON.stringify(todos.todoList));
         todos.updateNbOfItemLeft();
-        container.removeChild(item.parentElement.parentElement);
+        todoContainer.removeChild(item.parentElement.parentElement);
       }
     });
 
@@ -130,7 +131,7 @@ const todos = {
 
     const newTodo = document.importNode(template.content, true);
 
-    const todoContainer = document.querySelector('.todo__form');
+    const todoContainer = document.getElementById('todoListContainer');
 
     if (todo.state === 'checked') {
       newTodo.querySelector('input[type="checkbox"]').checked = true;
@@ -152,9 +153,10 @@ const todos = {
     todoContainer.append(newTodo);
   },
   deleteTodo: function (event) {
-    const todoContainer = document.querySelector('.todo__form');
+    const todoContainer = document.getElementById('todoListContainer');
 
     const item = event.target.closest('.todo__list-item-container');
+    console.log('item:', item);
 
     const textItem = item.querySelector('label').textContent;
 
@@ -196,5 +198,31 @@ const todos = {
     }
 
     localStorage.setItem('todoList', JSON.stringify(todos.todoList));
+  },
+  sortable: function (list) {
+    Sortable.create(list, {
+      animation: 150,
+      group: 'localStorage-example',
+      store: {
+        /**
+         * Get the order of elements. Called once during initialization.
+         * @param   {Sortable}  sortable
+         * @returns {Array}
+         */
+        get: function (sortable) {
+          var order = localStorage.getItem(sortable.options.group.name);
+          return order ? order.split('|') : [];
+        },
+
+        /**
+         * Save the order of elements. Called onEnd (when the item is dropped).
+         * @param {Sortable}  sortable
+         */
+        set: function (sortable) {
+          var order = sortable.toArray();
+          localStorage.setItem(sortable.options.group.name, order.join('|'));
+        },
+      },
+    });
   },
 };

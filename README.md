@@ -33,9 +33,11 @@ Users should be able to:
 
 ### Screenshot
 
-![Alt text](<images/Screenshot 2023-12-14 at 23-39-33 Frontend Mentor Todo app.png>)
-![Alt text](<images/Screenshot 2023-12-14 at 23-39-47 Frontend Mentor Todo app.png>)
-![Alt text](<images/Screenshot 2023-12-14 at 23-40-26 Frontend Mentor Todo app.png>)
+![Alt text](<images/Screenshot 2023-12-14 at 23-39-33 Frontend Mentor Todo app.png>)  
+
+![Alt text](<images/Screenshot 2023-12-14 at 23-39-47 Frontend Mentor Todo app.png>)  
+
+![Alt text](<images/Screenshot 2023-12-14 at 23-40-26 Frontend Mentor Todo app.png>)  
 
 ### Links
 
@@ -50,9 +52,11 @@ Users should be able to:
 - Flexbox
 - Mobile-first workflow
 - JavaScript
+- [Sortable](https://github.com/SortableJS/Sortable?tab=readme-ov-file#cdn)
 
 ### What I learned
 
-Building a responsive web application using HTML, CSS, and JavaScript.
-Working with local storage to persist data between sessions.
+Building a responsive web application using HTML, CSS, and JavaScript.  
+Working with local storage to persist data between sessions.  
 Event handling and DOM manipulation in JavaScript.
+Manipulating a JavaScript library to reorder the todo list and store the position
